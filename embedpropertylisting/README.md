@@ -184,3 +184,29 @@ Stripe payment placeholders
 GitHub Actions and PR workflow ready (referenced in CONTRIBUTING.md)
 
 Clean folder structure for easy expansion
+
+id,type,label,required,validation_pattern,error_message
+role,radio,Let’s personalize your experience,true,,
+profile_desc,radio,Which best describes you?,true,,
+units_count,number,How many units do you own/manage?,true,^[0-9]+$,Please enter a valid number of units.
+exp_length,radio,How long have you managed rentals?,true,,
+referral,dropdown,How did you hear about TurboTenant?,false,,
+first_name,text,First Name,true,^[A-Za-zÀ-ÖØ-öø-ÿ' -]+$,Please enter a valid first name.
+last_name,text,Last Name,true,^[A-Za-zÀ-ÖØ-öø-ÿ' -]+$,Please enter a valid last name.
+email,email,Email Address,true,^[^\s@]+@[^\s@]+\.[^\s@]+$,Please enter a valid email address.
+phone,tel,Phone Number (Optional),false,^\+?[0-9\s\-\(\)]{7,20}$,Enter a valid phone number (numbers and + allowed).
+password,password,Password,true,^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d!@#$%^&*()_+]{8,}$,Password must be at least 8 characters and include a number.
+property_name,text,Property Name,true,,
+property_address,text,Property Address,true,,
+property_id,text,Property ID,false,,
+turbo_url,url,TurboTenant Property URL,false,^(https?:\/\/)([A-Za-z0-9-]+\.)+[A-Za-z]{2,}(\/\S*)?$,Please enter a valid URL
+turbo_ical,url,TurboTenant iCal Feed,false,^(https?:\/\/)([A-Za-z0-9-]+\.)+[A-Za-z]{2,}(\/\S*)?$,Please enter a valid URL
+zillow_profile,url,Zillow Profile / Listing,false,^(https?:\/\/)([A-Za-z0-9-]+\.)+[A-Za-z]{2,}(\/\S*)?$,Please enter a valid URL
+realtor_url,url,Realtor.com Listing,false,^(https?:\/\/)([A-Za-z0-9-]+\.)+[A-Za-z]{2,}(\/\S*)?$,Please enter a valid URL
+apartments_url,url,Apartments.com Listing,false,^(https?:\/\/)([A-Za-z0-9-]+\.)+[A-Za-z]{2,}(\/\S*)?$,Please enter a valid URL
+booking_url,url,Booking.com Listing (if applicable),false,^(https?:\/\/)([A-Za-z0-9-]+\.)+[A-Za-z]{2,}(\/\S*)?$,Please enter a valid URL
+ical_booking,url,Booking iCal Feed,false,^(https?:\/\/)([A-Za-z0-9-]+\.)+[A-Za-z]{2,}(\/\S*)?$,Please enter a valid URL
+facebook_url,url,Facebook Share / Page,false,,
+social_url,url,Other Social / Nextdoor,false,,
+final_tracking_url,url,Final Tracking URL (UTM),false,^(https?:\/\/)([A-Za-z0-9-]+\.)+[A-Za-z]{2,}(\/\S*)?$,Please enter a valid URL
+accept_terms,checkbox,By clicking Sign Up, you agree to our Terms of Use and Privacy Policy.,true,,
