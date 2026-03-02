@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Property Tour Reminder | VIVIA Rentals</title>
+<style>
+  body { font-family: Arial, sans-serif; font-size: 14px; color: #666666; line-height: 1.5; }
+  a { color: #7075db; text-decoration: none; }
+  h2 { margin: 0; font-size: 18px; color: #666666; }
+  p { margin: 4px 0; }
+  .contact-info a { color: #666666; text-decoration: none; }
+  .social-links a { margin-right: 8px; color: #666666; text-decoration: none; }
+  .cta { margin-top: 10px; }
+  .signature img { width: 125px; display: block; }
+  .company-logo img { width: 130px; max-width: 130px; }
+  table { max-width: 600px; width: 100%; border-collapse: collapse; }
+</style>
+</head>
+<body>
+
+<p>Hi {{ contact.firstname }}, 👋</p>
+
+<p>You’re all set for your scheduled property tour with <strong>VIVIA Rentals</strong>!</p>
+
+<ul>
+  <li>📍 <strong>Address:</strong> {{ deal.property_address }}</li>
+  <li>📅 <strong>Date & Time:</strong> {{ deal.tour_date }} at {{ deal.tour_time }}</li>
+  <li>👤 <strong>Hosted by:</strong> {{ deal.host_name }}</li>
+  <li>🔗 <strong>Join via Google Meet:</strong> <a href="{{ deal.meeting_link }}">{{ deal.meeting_link }}</a></li>
+</ul>
+
+<p>Please remember:</p>
+<ul>
+  <li>Bring a valid government-issued ID</li>
+  <li>Arrive 5–10 minutes early</li>
+  <li>To reschedule, contact us at <a href="mailto:{{ deal.organizer_email }}">{{ deal.organizer_email }}</a></li>
+</ul>
+
+<p><strong>Next Steps:</strong></p>
+<ul>
+  <li>This tour finalizes your onboarding into our TurboTenant landlord dashboard</li>
+  <li>All updates are tracked in HubSpot + Slack for accuracy</li>
+</ul>
+
+<p>Sign up here: <a href="{{ deal.signup_link }}">TurboTenant Autopilot</a></p>
+
+<hr>
+
+<table>
+  <tr>
+    <td class="signature">
+      <img src="https://www.turbotenant.com/nitropack_static/DnewKXQeUpEmvDhTCIHXdznjCdZBTuQP/assets/images/optimized/rev-5b8b1ff/www.turbotenant.com/wp-content/uploads/2023/07/app-push-screening-mobile-app2x-768x1223.png" alt="Handwritten Signature">
+    </td>
+    <td>
+      <table>
+        <tr>
+          <td class="company-logo">
+            <img src="https://files.stripe.com/links/MDB8YWNjdF8xVDFjWXBGWUVIRG96cjl6fGZsX3Rlc3RfSW5DT1A1UE82bzNDd3RVR2ptRjhwM2d500vDqnQ55Y" alt="Company Logo">
+          </td>
+          <td style="padding-left:10px;">
+            <h2>{{ first_name }} {{ last_name }}</h2>
+            <p>{{ job_title }}</p>
+            <p>{{ department }} | {{ company_name }}</p>
+            <p>Primary Service: {{ primary_service }}</p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" style="padding-top:10px;" class="contact-info">
+            📞 <a href="tel:{{ office_phone }}">{{ office_phone }}</a> | <a href="tel:{{ mobile_phone }}">{{ mobile_phone }}</a><br>
+            ✉️ <a href="mailto:{{ email_address }}">{{ email_address }}</a><br>
+            🌐 <a href="{{ website_url }}">{{ website_url }}</a><br>
+            📍 {{ address }}
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" class="social-links" style="padding-top:10px;">
+            LinkedIn: <a href="{{ linkedin_url }}">LinkedIn</a> | 
+            Facebook: <a href="{{ facebook_url }}">Facebook</a> | 
+            X/Twitter: <a href="{{ twitter_url }}">X</a> | 
+            Instagram: <a href="{{ instagram_url }}">Instagram</a> | 
+            WhatsApp: <a href="{{ whatsapp_url }}">WhatsApp</a>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" class="cta" style="padding-top:10px;">
+            🏠 Sign up & onboard your property: <a href="https://rental.turbotenant.com/auth/signup/autopilot/personalize">TurboTenant Autopilot</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
